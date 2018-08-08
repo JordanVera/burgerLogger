@@ -1,8 +1,9 @@
-CREATE DATABASE burgers_db;
+CREATE DATABASE burgers_db IF NOT EXISTS;
 USE burgers_db;
+
 CREATE TABLE burgers (
-    id int(10) not null auto_increment,
-    burger_name varchar(100) not null,
-    devoured bool,
-    primary key (id)
-)
+    id INT AUTO_INCREMENT;
+    ,burger_name VARCHAR(100) not null
+    ,devoured BOOLEAN DEFAULT 0
+    ,primary key (id)
+);
